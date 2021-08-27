@@ -1,4 +1,6 @@
 import React from "react";
+import LoginBox from "./login";
+import RegisterBox from "./register";
 import "./App.css";
 
 class App extends React.Component {
@@ -14,6 +16,8 @@ class App extends React.Component {
     return (
       <div className="root-container">
         <h1>Opa</h1>
+        <LoginBox />
+        <RegisterBox />
       </div>
     );
   }
