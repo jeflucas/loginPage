@@ -12,12 +12,35 @@ class App extends React.Component {
     };
   }
 
+  showLoginBox() {
+    this.setState({ isLoginOpen: true, isRegisterOpen: false });
+  }
+
+  showRegisterBox() {
+    this.setState({ isLoginOpen: false, isRegisterOpen: true });
+  }
+
   render() {
     return (
       <div className="root-container">
-        <h1>Opa</h1>
-        <LoginBox />
-        <RegisterBox />
+        <div
+          className={
+            "controller " + (this.isLoginOpen ? "selected-contoller" : "")
+          }
+          onClick={this.showLoginBox.bind(this)}
+        >
+          Login
+        </div>
+        <div
+          className={
+            "controller " + (this.isRegisterOpen ? "selected-controller" : "")
+          }
+          onClick={this.showRegisterBox.bind(this)}
+        >
+          Register
+        </div>
+        {this.state.isLoginOpen && <LoginBox />}
+        {this.state.isRegisterOpen && <RegisterBox />}
       </div>
     );
   }

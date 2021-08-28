@@ -3,6 +3,13 @@
 import React from "react";
 
 class RegisterBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  submitRegister(e) {}
+
   render() {
     return (
       <div className="inner-container">
@@ -19,9 +26,31 @@ class RegisterBox extends React.Component {
               placeholder="Username"
             />
           </div>
-          <div className="input-group"></div>
-          <div className="input-group"></div>
-          <button></button>
+          <div className="input-group">
+            <label htmlFor="email">E-mail: </label>
+            <input
+              type="text"
+              name="email"
+              className="login-input"
+              placeholder="E-mail"
+            />
+          </div>
+          <div className="input-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              className="login-input"
+              placeholder="Password"
+            />
+          </div>
+          <button
+            type="button"
+            className="login-btn"
+            onClick={this.submitRegister.bind(this)}
+          >
+            Register
+          </button>
         </div>
       </div>
     );
