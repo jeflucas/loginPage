@@ -12,10 +12,10 @@ class LoginBox extends React.Component {
   render() {
     return (
       <div className="inner-container">
-        <div className="header">
-          <h2>Login</h2>
-        </div>
         <div className="box">
+          <div className="field">
+            <h2 className="label">Login</h2>
+          </div>
           <div className="input-group">
             <label htmlFor="username">Username:</label>
             <input
